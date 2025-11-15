@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Your Mentor</title>
+  <link rel="stylesheet" href="findmentor.css" />
+</head>
+<body>
+
+  <!-- DESKTOP SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav-links">
+      <a href="#" class="nav-link active">Dashboard</a>
+      <a href="#" class="nav-link">Career Roadmap</a>
+      <a href="#" class="nav-link">Find Mentors</a>
+      <a href="#" class="nav-link">Resources</a>
+      <a href="#" class="nav-link">Career Quiz</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-wrapper">
+
+    <!-- Header -->
+    <header class="header">
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="logo">T</div>
+      <div class="profile">P</div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <nav class="nav-links">
+          <a href="#" class="nav-link active">Dashboard</a>
+          <a href="#" class="nav-link">Career Roadmap</a>
+          <a href="#" class="nav-link">Find Mentors</a>
+          <a href="#" class="nav-link">Resources</a>
+          <a href="#" class="nav-link">Career Quiz</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Find Your Mentor</h1>
+      <p>Connect with experienced professionals who can guide you on your tech journey.</p>
+    </section>
+
+    <!-- Track -->
+    <section class="track-section">
+      <label for="trackSelect">Choose a Track:</label>
+      <select id="trackSelect"></select>
+    </section>
+
+    <!-- Search & Filters -->
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Search by name, title, or expertise..." />
+      <div class="filters">
+        <select id="expertiseFilter"><option value="">All Expertise</option></select>
+        <select id="availabilityFilter">
+          <option value="">All Availability</option>
+          <option value="available">Available Now</option>
+          <option value="busy">Busy</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- MENTOR CARD TEMPLATE (WhatsApp link in HTML) -->
+    <template id="mentorTemplate">
+      <div class="mentor-card">
+        <h3 class="mentor-name"></h3>
+        <p class="expertise"></p>
+        <p class="bio"></p>
+        <p class="availability"></p>
+        <!-- WhatsApp link directly in HTML -->
+        <a href="https://wa.me/1234567890?text=Hi!%20I'd%20like%20to%20join%20the%20group%20chat." 
+           class="btn-whatsapp" 
+           target="_blank">
+          <button>Join Group Chat</button>
+        </a>
+      </div>
+    </template>
+
+    <!-- MENTORS LIST -->
+    <section id="mentorsList" class="mentors-list"></section>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="techtracks.js"></script>
+  <script src="findmentor.js"></script>
+</body>
+</html>
