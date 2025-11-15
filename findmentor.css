@@ -57,7 +57,7 @@ body {
 
 .logo {
   width: 40px; height: 40px;
-  background: linear-gradient(135deg, #6a11cb, 50%, #25fc7f 50%);
+  background: white;
   color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 1.4rem;
@@ -69,7 +69,7 @@ body {
 
 .profile {
   width: 36px; height: 36px;
-  background: linear-gradient(135deg, #6a11cb, 50%, #25fc7f 50%);
+  background: white;
   color: rgb(255, 255, 255);
   font-weight: bold;
   border-radius: 50%;
@@ -181,24 +181,28 @@ body {
 }
 
 .hero { 
-  text-align: center; 
-  margin: 2rem 0; 
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  text-align: start; 
+  margin-top : 2rem; 
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
   position: relative; 
   z-index: 1; 
+  padding: 30px 20px;
 }
 
 .hero h1 { 
-  font-size: 2rem; 
-  color: #4a148c; 
+  font-size: 2rem;  
 }
 
-.hero p { 
-  color: #666; 
+.hero p {  
   margin-top: 0.5rem; 
 }
 
 .track-section, .search-section { 
-  margin-bottom: 1.5rem; 
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem; 
 }
 
 label { 
@@ -225,14 +229,173 @@ input, select {
    } 
   }
 
-.mentors-list { display: grid; gap: 1rem; }
+.mentors-list { 
+  display: grid; 
+  gap: 1rem; 
+
+}
 .mentor-card {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
   background: white;
   padding: 1.2rem;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-.mentor-card h3 { color: #4a148c; margin-bottom: 0.3rem; }
-.expertise { color: #1976d2; font-weight: 600; font-size: 0.9rem; }
-.mentor-card p { color: #555; font-size: 0.95rem; margin: 0.4rem 0; }
+.mentor-info {
+  margin-top: 90px;
+  margin-left: 10px;
+}
+.mentor-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.mentor-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+  flex-shrink: 0;
+}
+.mentor-name {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #4a148c;
+}
+.expertise {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  color: #1976d2;
+  font-weight: 600;
+}
+.bio {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+.availability {
+  font-size: 0.88rem;
+  margin: 0.4rem 0 0;
+  line-height: 1.4;
+}
+.availability span {
+  display: inline-block;
+  margin-right: 0.2rem;
+}
+.mentor-card h3 { 
+  color: #4a148c;
+   margin-bottom: 0.3rem; 
+  }
+.expertise { 
+  color: #1976d2; 
+  font-weight: 600; 
+  font-size: 0.9rem; 
+}
+.mentor-card p { 
+  color: #555; 
+  font-size: 0.95rem; 
+  margin: 0.4rem 0; }
 
+/* Mobile-First, Responsive (Exact Match) */
+.site-footer {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding: 2rem 1rem 1.5rem;
+  margin-top: 3rem;
+  font-family: system-ui, sans-serif;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.footer-brand {
+  text-align: center;
+}
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.footer-tagline {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.footer-section {
+  text-align: center;
+}
+.footer-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.footer-section ul li a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+.footer-section ul li a:hover {
+  color: #ffffff;
+}
+.footer-section p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin: 1.5rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* RESPONSIVE: Desktop (≥768px) */
+@media (min-width: 768px) {
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2rem;
+  }
+  .footer-brand {
+    flex: 1;
+    max-width: 300px;
+    text-align: left;
+  }
+  .footer-section {
+    flex: 1;
+    text-align: left;
+  }
+  .footer-section ul {
+    align-items: flex-start;
+  }
+  .footer-copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+}
